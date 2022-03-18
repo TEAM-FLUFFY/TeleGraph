@@ -1,1 +1,1 @@
-web: python3 telegraph.py
+web: python3 tgraph.py
