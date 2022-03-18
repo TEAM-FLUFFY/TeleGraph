@@ -23,8 +23,6 @@ async def start_message(bot, message):
         caption=START_MESSAGE.format(message.from_user.mention),
         reply_markup=InlineKeyboardMarkup( [[
            InlineKeyboardButton ("𝙳𝙴𝚅", url="https://t.me/KAAVAL_KAARAN_tg"),
-           ],[
-           InlineKeyboardButton ("𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴?", return await query.answer("𝙸𝚃'𝚂 𝚂𝙸𝙼𝙿𝙻𝙴 𝚂𝙴𝙽𝚃 𝙼𝙴 5𝙼𝙱 𝙿𝙸𝙲𝚃𝚄𝚁𝙴 𝙸 𝙴𝙳𝙸𝚃 𝙰𝙽𝙳 𝚂𝙴𝙽𝚃 𝚈𝙾𝚄𝚁 𝙵𝙸𝙻𝙴.", show_alert=True),
            ]]
           )
     )
