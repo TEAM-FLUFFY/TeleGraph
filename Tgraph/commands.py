@@ -14,8 +14,8 @@ START_MESSAGE= """
 
 @Client.on_message(filters.command("start"))
 async def start_cmd(bot, msg):
-    await msg.reply_text(
-        text="InlineKeyboardButton("✗ 𝐶𝑙𝑜𝑠𝑒 𝑇𝒉𝑒 𝑀𝑒𝑛𝑢 ✗", callback_data='close_data")
+    await msg.reply_photo(
+        photo="https://telegra.ph/file/cac42a836652d9314a807.jpg")
     )
 
 
