@@ -1,27 +1,14 @@
-import os
-import pyrogram
-from telegraph import upload_file
-from pyrogram import filters, Client
-from pyrogram.types import (
-    InlineQueryResultArticle, InputTextMessageContent,
-    InlineKeyboardMarkup, InlineKeyboardButton,
-    CallbackQuery, InlineQuery, Message)
-import logging
-
-
-
-
 @Client.on_message(filters.photo)
 async def uploadphoto(client, message):
-  msg = await message.reply_text("𝑢𝑝𝑙𝑜𝑜𝑑𝑖𝑛𝑔...▪️ ◾ ◼️")
+  msg = await message.reply_text("yours text")
   userid = str(message.chat.id)
   img_path = (f"./Download....!/{userid}.jpg")
   img_path = await client.download_media(message=message, file_name=img_path)
-  await msg.edit_text("ᴜᴩʟᴏᴀᴅɪɴɢ ᴛᴏ ᴛᴇʟᴇɢʀᴀᴍ ʙy @KAAVAL_KAARAN_tg")
+  await msg.edit_text("yours text @septemberfilms")
   try:
     tlink = upload_file(img_path)
   except:
-    await msg.edit_text("ᴜᴩʟᴏᴀᴅɪɴɢ ᴛᴏ ᴛᴇʟᴇɢʀᴀᴍ ʙy @KAAVAL_KAARAN_tg") 
+    await msg.edit_text("yours text @septemberfilms") 
   else:
     await msg.edit_text(f"https://telegra.ph{tlink[0]}")     
     os.remove(img_path) 
@@ -29,24 +16,24 @@ async def uploadphoto(client, message):
 @Client.on_message(filters.animation)
 async def uploadgif(client, message):
   if(message.animation.file_size < 5242880):
-    msg = await message.reply_text("ᴜᴩʟᴏᴀᴅɪɴɢ ᴛᴏ ᴛᴇʟᴇɢʀᴀᴍ ʙy @KAAVAL_KAARAN_tg")
+    msg = await message.reply_text("yours text @septemberfilms")
     userid = str(message.chat.id)
     gif_path = (f"./DOWNLOADS/{userid}.mp4")
     gif_path = await client.download_media(message=message, file_name=gif_path)
-    await msg.edit_text("Loading")
+    await msg.edit_text("yours text`")
     try:
       tlink = upload_file(gif_path)
       await msg.edit_text(f"https://telegra.ph{tlink[0]}")   
       os.remove(gif_path)   
     except:
-      await msg.edit_text("ᴜᴩʟᴏᴀᴅɪɴɢ ᴛᴏ ᴛᴇʟᴇɢʀᴀᴍ @KAAVAL_KAARAN_tg") 
+      await msg.edit_text("yours text join @septemberfilms") 
   else:
     await message.reply_text("Size Should Be Less Than 5 mb join @septemberfilms")
 
 @Client.on_message(filters.video)
 async def uploadvid(client, message):
   if(message.video.file_size < 5242880):
-    msg = await message.reply_text("ᴜᴩʟᴏᴀᴅɪɴɢ ᴛᴏ ᴛᴇʟᴇɢʀᴀᴍ ʙy @KAAVAL_KAARAN_tg)
+    msg = await message.reply_text("yours text @septemberfilms")
     userid = str(message.chat.id)
     vid_path = (f"./DOWNLOADS/{userid}.mp4")
     vid_path = await client.download_media(message=message, file_name=vid_path)
@@ -56,6 +43,6 @@ async def uploadvid(client, message):
       await msg.edit_text(f"https://telegra.ph{tlink[0]}")     
       os.remove(vid_path)   
     except:
-      await msg.edit_text("ᴜᴩʟᴏᴀᴅɪɴɢ ᴛᴏ ᴛᴇʟᴇɢʀᴀᴍ ʙy @KAAVAL_KAARAN_tg") 
+      await msg.edit_text("yours text join @septemberfilms") 
   else:
-    await message.reply_text("ᴜᴩʟᴏᴀᴅɪɴɢ ᴛᴏ ᴛᴇʟᴇɢʀᴀᴍ ʙy @KAAVAL_KAARAN_tg")
+    await message.reply_text("yours text join @septemberfilms")
