@@ -40,5 +40,4 @@ async def start_cmd(bot, msg):
 async def cb(bot, msg):
     if msg.data == "about":
         await msg.answer("""𝐶𝑟𝑒𝑎𝑡𝑒𝑟 : @KAAVAL_KAARAN_tg
-𝐷𝑒𝑣 : @KAAVAL_KAARAN_tg
 𖣘 𝐵𝑜𝑡 : 𝙸𝙽𝙳𝙸𝙰𝙽""", show_alert=True)
