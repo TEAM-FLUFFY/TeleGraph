@@ -6,7 +6,11 @@ import random
 
 
 START_MESSAGE= """
-ℎ𝑒𝑦 𝑑𝑒𝑎𝑟 {} 𝑏𝑟𝑜 𝑖𝑎𝑚 𝑇𝑔𝑟𝑎𝑝ℎ
+𝙃𝙖𝙞 {},
+𝙸 𝙰𝚖 𝙰 𝙿𝚛𝚎 𝙵𝚞𝚗𝚌𝚝𝚒𝚘𝚗𝚎𝚍 𝚁𝚘𝚋𝚘𝚝 𝙽𝚊𝚖𝚎𝚍,  <a href=https://t.me/EFX_TGRAPHbot>𝑇𝑔𝑟𝑎𝑝ℎ</a>!
+<a href='t.me/EFX_TGRAPHbot'>𝑆𝑡𝑎𝑟𝑡 𝑀𝑒</a>,🟡𝙏𝙝𝙚𝙣 𝙎𝙚𝙚 𝙈𝙮 𝙋𝙤𝙬𝙚𝙧𝙨✨️
+➖➖➖➖➖➖➖➖➖➖➖➖➖
+©MᴀɪɴᴛᴀɪɴᴇD Bʏ:<a href='tg://user?id=5133623467'><b>✫𝐴𝑡ℎ𝑖𝑓 𝗧𝗚 [ᵒⁿˡⁱⁿᵉ]🇦🇹 : 𝑒𝑥𝑎𝑚📚</b></a> .</b>
 """
 
 
@@ -26,21 +30,15 @@ async def start_cmd(bot, msg):
         text=START_MESSAGE.format(msg.from_user.mention),
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("𝑎𝑏𝑜𝑢𝑡", callback_data="about"),
-            InlineKeyboardButton("ℎ𝑜𝑤 𝑡𝑜 𝑢𝑠𝑒?", callback_data="use") 
+            InlineKeyboardButton("ℎ𝑜𝑤 𝑡𝑜 𝑢𝑠𝑒?", url="https://t.me/T_Graph_U_s_e") 
             ]]
             )
         )
 
 
-
-@Client.on_callback_query()
-async def cb(bot, msg):
-    if msg.data == "use":
-        await msg.answer("""𝙸𝚃'𝚂 𝚂𝙸𝙼𝙿𝙻𝙴 𝚃𝙾 𝚄𝚂𝙴 𝙼𝙴. 𝙹𝚄𝚂𝚃 𝚂𝙴𝙽𝙳 𝙰𝙽𝚈 𝙿𝙸𝙲𝚃𝚄𝚁𝙴𝚂 𝙾𝚁 𝚅𝙸𝙳𝙴𝙾𝚂 𝙱𝙴𝙻𝙾𝚆 5𝙼𝙱 𝙰𝙽𝙳 𝚈𝙾𝚄 𝚆𝙸𝙻𝙻 𝙶𝙴𝚃𝚃𝙷𝙴 𝚃𝙶𝚁𝙰𝙿𝙷 𝙻𝙸𝙽𝙺
-""", show_alert=True)
-
 @Client.on_callback_query()
 async def cb(bot, msg):
     if msg.data == "about":
         await msg.answer("""𝐶𝑟𝑒𝑎𝑡𝑒𝑟 : @KAAVAL_KAARAN_tg
+𝐷𝑒𝑣 : @KAAVAL_KAARAN_tg
 𖣘 𝐵𝑜𝑡 : 𝙸𝙽𝙳𝙸𝙰𝙽""", show_alert=True)
