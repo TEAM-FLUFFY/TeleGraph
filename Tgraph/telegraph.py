@@ -23,7 +23,7 @@ async def uploadphoto(client, message):
   except:
     await msg.edit_text("⦿ ⦿") 
   else:
-    await msg.edit_text(f"https://telegra.ph{tlink[0]}")     
+    await msg.edit_text(f"`https://telegra.ph{tlink[0]}`")     
     os.remove(img_path) 
 
 @Client.on_message(filters.animation)
@@ -46,14 +46,14 @@ async def uploadgif(client, message):
 @Client.on_message(filters.video)
 async def uploadvid(client, message):
   if(message.video.file_size < 5242880):
-    msg = await message.reply_text("⦿ ⦿ ⦿ ⦿ ⦿)
+    msg = await message.reply_text("⦿ ⦿ ⦿ ⦿ ⦿")
     userid = str(message.chat.id)
     vid_path = (f"./DOWNLOADS/{userid}.mp4")
     vid_path = await client.download_media(message=message, file_name=vid_path)
     await msg.edit_text("yours text")
     try:
       tlink = upload_file(vid_path)
-      await msg.edit_text(f"https://telegra.ph{tlink[0]}")     
+      await msg.edit_text(f"`https://telegra.ph{tlink[0]}`")     
       os.remove(vid_path)   
     except:
       await msg.edit_text("⦿ ⦿ ⦿ ⦿ ⦿ ⦿") 
