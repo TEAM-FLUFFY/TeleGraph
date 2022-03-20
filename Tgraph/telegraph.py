@@ -50,7 +50,7 @@ async def uploadvid(client, message):
     userid = str(message.chat.id)
     vid_path = (f"./DOWNLOADS/{userid}.mp4")
     vid_path = await client.download_media(message=message, file_name=vid_path)
-    await msg.edit_text("yours text")
+    await msg.edit_text("𝙿𝚄𝚂𝙷𝙿𝙰 𝚁𝙴𝙹𝚄")
     try:
       tlink = upload_file(vid_path)
       await msg.edit_text(f"`https://telegra.ph{tlink[0]}`")     
